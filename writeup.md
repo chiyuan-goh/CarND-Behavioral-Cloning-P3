@@ -154,7 +154,7 @@ As mentioned earlier in the Network Architecture section, after augmentating the
 2. Scaling values between 0-1 and 0 mean
 3. Resize to 64 by 64 pixels.
 
-Here is n sample without any augmentation:
+Here is a sample without any augmentation:
 
 ![alt text][img_resize]
 
