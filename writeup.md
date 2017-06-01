@@ -154,15 +154,13 @@ As mentioned earlier in the Network Architecture section, after augmentating the
 2. Scaling values between 0-1 and 0 mean
 3. Resize to 64 by 64 pixels.
 
-Here is an sample without any augmentation:
+Here is n sample without any augmentation:
 
 ![alt text][img_resize]
 
-
-
 I finally randomly shuffled the data set and put 10% of the data into a validation set. I used this training data for training the model. Only a small amount of validation set was used, to maximize the number of training examples. While the validation error is a good indication of overfitting/underfitting, poor model and program bugs and whether the model will do well (empircal observations seem to suggest < 0.03 threshold), the eventual metric/goal is that the model completes the track. A noteworthy observation is that a model with 0.01 validation rms does not necessary do better than another with 0.02 error. 
 
- The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I trained the model for a maximum of 5 epochs. Beyond 5 iterations, while minimal improvements can be made to the validation error, it does not seem to help towards completing the track.
  
 ![alt text][img_hist]
 As seen from the histogram above, there is a strong bias towards small angle steering. Even after adding the left and right camera images, there is still biases towards 0, `0 + correction`, `0 - correction `degrees.
