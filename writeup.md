@@ -1,4 +1,4 @@
-#**Behavioral Cloning** 
+# **Behavioral Cloning** 
 
 
 ---
@@ -40,7 +40,7 @@ The goals / steps of this project are the following:
   
 
 ---
-###Files Submitted & Code Quality
+### Files Submitted & Code Quality
 
 My project includes the following files:
 
@@ -49,7 +49,7 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network 
 * writeup.md summarizing the results
 
-####2. Submission includes functional code
+#### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
 python drive.py model.h5
@@ -57,13 +57,13 @@ python drive.py model.h5
 
 To train the model, execute ```python model.py --training_file=<training csv> --output=<model_file>```
 
-####3. Submission code is usable and readable
+#### 3. Submission code is usable and readable
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 
 My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 64.
 
@@ -98,7 +98,7 @@ The final archictecture looked like this:
 | output						| 1 node (output == steering angle)  												|
 |						|												|
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 The model uses 3 strategies to combat overfitting:
 
@@ -108,12 +108,12 @@ The model uses 3 strategies to combat overfitting:
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 The model used an adam optimizer, so the learning rate was not tuned manually.
 
 
-####4. Creation of the Training Set & Training Process
+#### 4. Creation of the Training Set & Training Process
 
 The dataset used for training and validation purposes is obtained from the sample data provided by Udacity solely. This consist of 24108 captured images from the left, right and center cameras, together with the recorded steering angle.
 
